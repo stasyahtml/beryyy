@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link  href="fonts">
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="js/site.js"></script>
+        <script src="//vk.com/js/api/openapi.js?122" type="text/javascript"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <link href="jquery.bxslider.css" rel="stylesheet" />
+
+        <style>
+            @font-face{
+                font-family: :Verdana;
+                src: url(fonts:Verdana.ttf);
+            }
+        </style>
+    <head>
+
+    <body>
+
+        <div class="first_block">
+            <div class="border">
+                <div class="block">
+                    <div class="top_row">
+                        <ul class="first_ul">
+                            <li>
+                                <img src="img/telephone-call-contact.png">
+                                <div class="freecall" id="up">Бесплатный звонок по России
+                                <div class="numb">8-800-XXX-XX-XX</div></div>
+                            </li>
+                            <li>
+                                Доставляем во все страны и города
+                                бывшего СССР и целого мира
+                            </li>
+                            <li>
+                                <a href="#">
+                                    beruska.ru
+                                </a>
+                                Косметика из Европы
+                            </li>
+                            <li>
+                                <a href="#">
+                                     beruska-baby.com
+                                </a>
+                                Детские товары из Европы
+                            </li>
+                            <li>
+                                <a href="#">
+                                    beruska-magazine.ru
+                                </a>
+                                Женский журнал
+                            </li>
+
+                        </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="pretop_row">
+                    <ul class="second_ul">
+                        <li>
+                            <img src="img/logo.png">
+                        </li>
+                        <li>
+                            <div class="skype"><img src="img/skype.jpg"><a href="#">Связаться по skype</a></div>
+                            <div> <a href ="#"><img src="img/gift.png">Получи свой подарок </a></div>
+                        </li>
+                        <li>
+                            <div><a href ="#"><img src="img/delivery-food.png">Условия доставки</a></div>
+                            <div><a href ="#"><img src="img/coins.png">Условия оплаты</a></div>
+                        </li>
+                        <li>
+                            <a href ="#">
+                                <div class="img_online_help"> <img src="img/online-support.png"></div>
+                                <div class="online_help">Помощь online
+                                <br>с 9.00 до 18.00</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href ="#"><img src="img/vkontakte.png"></a>
+                            <a href ="#"><img src="img/yandex.png"></a>
+                            <a href ="#"><img src="img/twitter.png"></a>
+                            <a href ="#"><img src="img/odnoklassniki.png"></a>
+                            <a href ="#"><img src="img/livejournal.png"></a>
+                            <a href ="#"><img src="img/skype.png"></a>
+                            <a href ="#"><img src="img/facebook.png"></a>
+                            <div><a href ="#"><img src="img/login.png">Вход  Регистрация</a></div>
+                        </li>
+                    </ul>
+                    <div class="cart">
+                        <img src="img/layer-71.png">
+                        <div> <span class="uhave">В вашей корзине</span>
+                        <br>
+                        <span>(0) товаров</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="second_block">
+            <div class="block">
+                <ul class="menu">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Условия покупки</a></li>
+                    <li><a href="#">Зарабатывай с нами</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+
+                <div class="main_pics">
+                    <ul class="pic1">
+                        <li class="firstpic"><img src="img/layer-64.png"></li>
+                        <li class="secondpic"><img src="img/layer-126.png"></li>
+                        <li class="text"> <span class="forface">Крем для лица</span>
+                            <br><div class="wet">с интенсивным <br><span>увлажнением</span></div>
+                            <br>
+                            <div class="noprice price" style='color:red;text-decoration:line-through'>
+                                <div style='color:#3f3f41;'>1120 руб.</div>
+                            </div>
+                            <br><div class="price realprice">998 руб.</div>
+                            <br><div class="inside"><span>В корзину</span></div>
+                        </li>
+                        <li class="pic2">
+                            <img src="img/layer-68.png">
+                            <img src="img/2.png">
+                            <img src="img/layer-67.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="third_block">
+            <div class="block">
+                <div class="left">
+                    <ul class="catalog" >
+                        <div class="first" id="catalog_button">Каталог товаров</div>
+                        <script>
+                            var indexClick= 0,
+                                button = $(".first"),
+                                li= $(".catalog1");
+
+                                $(button).on("click", (function(event) {
+                                    if (indexClick === 0) {
+                                        $(".catalog1").addClass("active")
+                                        $(".catalog1").fadeIn(700);
+                                        indexClick = 1;
+                                    }
+                                    else {
+                                        $(".catalog1").fadeOut(700);
+                                        indexClick = 0;
+                                    }
+                                    event.stopPropagation();
+                                }))
+
+                            $(document).click(function(event)  {
+                                if ($(event.target).closest(".catalog1").length) return;
+                                $(".catalog1").fadeOut(700);
+                                indexClick = 0;
+                                event.stopPropagation();
+                           });
+                        </script>
+                        <div class="catalog1">
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Уход за телом</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Уход за лицом</a>
+                            <ul class="sub1">
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Сыворотка для лица</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Типы кожи лица</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Дневной крем</a>
+                                    <ul class="sub2">
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>BB крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Защитный крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем q10</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем антивозрастной</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем день ночь</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем для жирной кожи</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем для комбинированной кожи</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем для молодой кожи</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем для сухой кожи</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем для чувствительной кожи</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем с spf</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем с гиалуроновой кислотой</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем с коллагеном</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем с мочевиной</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Крем-гель</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Легкий крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Матирующий крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Питательный крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Регенерирующий крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Тонирующий крем</a></li>
+                                        <li><a href="#" class="athird"><span class="ion-ios-arrow-thin-right"></span>Увлажняющий крем</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Ночной крем</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Масла для лица</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Маски для лица</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Уход за губами</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Очищение лица</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Против морщин</a></li>
+                                <li><a href="#" class="asecond"><span class="ion-ios-arrow-thin-right"></span>Уход за кожей глаз</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Уход за руками</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Уход за ногами</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Против целлюлита</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Забота о волосах и зубах</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Средства для похудения</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Забота о Вас и ребенке</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Средства для душа</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Загар / Солярий</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Декоративная косметика</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Мужская косметика</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Маникюр / Педикюр</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Наборы косметики</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Интимные товары</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Для здоровья</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Новинки косметики</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Акции</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Модные штучки</a></li>
+                        <li><a href="#" class="afirst"><span class="ion-ios-arrow-thin-right"></span>Конкурс творчества!</a></li></div>
+                    </ul>
+
+
+
+                    <ul class="news">
+                        <a href="#" class="newsss">
+                            <span class="ion-chevron-right"></span>Hовости
+                        </a>
+
+                        <li>
+                            УСПЕЙ! СКИДКИ ДО 55% ТОЛЬКО ДО
+                            <br>
+                            <div class="info">
+                                <span class="date">31.08.13</span>
+                                <a href="#" class="describe">Подробнее</a>
+                            </div>
+                        </li>
+                        <li>
+                            Нас 2000 вКонтакте! Сегодня СКИДКА 20% НА ВСЮ КОСМЕТИКУ!
+                            <br>
+                            <div class="info">
+                                <span class="date">24.08.2013</span>
+                                <a href="#" class="describe">Подробнее</a>
+                            </div>
+                        </li>
+                        <li>
+                            Снижение цен на 10-15% на немецкую натуральную косметику Alverde!
+                            <br>
+                            <div class="info">
+                                <span class="date">15.08.2013</span>
+                                <a href="#" class="describe">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="readall">
+                            <a href="#">Cмотреть все</a>
+                        </li>
+                    </ul>
+
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                        VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "300"}, 1);
+                    </script>
+                </div>
+
+                <div class="middle">
+                    <ul class="gallery">
+                        <li>
+                            <a href="#"><img src="img/layer-97.png">
+                                <div class="descr">Уход за телом</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-95.png">
+                                <div class="descr">Уход за лицом</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-93.png">
+                                <div class="descr">Уход за руками</div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-94.png">
+                                <div class="descr">Уход за ногами</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-96.png">
+                                <div class="descr">Против целлюлита</div>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <ul class="gallery">
+                        <li>
+                            <a href="#"><img src="img/layer-116.png">
+                                <div class="descr">Забота о волосах
+                                    и зубах</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-99.png">
+                                <div class="descr">Забота о волосах
+                                    и зубах</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-108.png">
+                                <div class="descr">Забота о
+                                    Вас и ребенке</div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-102.png">
+                                <div class="descr">Средства
+                                    для душа и ванной</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-104.png">
+                                <div class="descr">Загар / Солярий</div>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <ul class="gallery">
+                        <li>
+                            <a href="#"><img src="img/layer-115.png">
+                                <div class="descr">Декоративная
+                                    косметика</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-114.png">
+                                <div class="descr">Мужская
+                                    косметика</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-113.png">
+                                <div class="descr">Маникюр /
+                                    Педикюр</div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-112.png">
+                                <div class="descr">Наборы косметики</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-111.png">
+                                <div class="descr">Интимные товары</div>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <ul class="gallery">
+                        <li>
+                            <a href="#"><img src="img/layer-110.png">
+                                <div class="descr">Бытовая химия</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-109.png">
+                                <div class="descr">Для здоровья</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-107.png">
+                                <div class="descr">Новинки
+                                    косметики</div>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-106.png">
+                                <div class="descr">Акции</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/layer-105.png">
+                                <div class="descr">Модные штучки</div>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <div class="descript_goal">
+                        <span class="first">Интернет-магазин  <span class="green">Beruska</span> — натуральная косметика европейского качества</span>
+                        <br>В ассортименте интернет-магазина <span class="greenthink">Beruska</span> представлена косметика лучших чешских, немецких
+                        <br>и мировых брендов — <span class="lightblue">Balea, Alverde, Dermacol, Lavera, Saloos, Styx, Cannaderm, Le Chaton</span>
+                        <br>и других. Главная цель деятельности нашего интернет-магазина — это доставка
+                        <br>исключительно качественной и натуральной косметики по доступным ценам в любую из стран СНГ.
+                    </div>
+                    <div class="item1">
+                        <div class="block1">
+                            <ul class="first_item1">
+                                <a href="#" class="why">
+                                    <span class="ion-chevron-right"></span>Почему покупать у нас
+                                </a>
+                                <li>Самый широкий ассортимент</li>
+                                <li>Гарантия низких цен</li>
+                                <li>Низкая стоимость доставки</li>
+                                <li>Гарантии Европейского качества</li>
+                            </ul>
+                            <ul class="second_item1">
+                                <a href="#" class="why">
+                                    <span class="ion-chevron-right"></span>Скидки
+                                </a>
+                                <li>При 2-й покупке — 5%</li>
+                                <li>При 3-й покупке — 6%</li>
+                                <li>При 4-й покупке — 7%</li>
+                                <li>Внимательный — +2% <br>к предыдущим</li>
+                                <li>За отзывы — до 15%</li>
+                            </ul>
+                        </div>
+                        <div class="block2">
+                            <div  class="third_item1"></div>
+                        </div>
+                        <div class="block3">
+                            <ul class="forth_item1">
+                                <a href="#" class="why">
+                                    <span class="ion-chevron-right"></span>Подписаться на новости
+                                </a>
+                                <li>Укажите свой e-mail для получения
+                                <br> информации о новинках и скидках</li>
+                                <form class="" id="form">
+                                    <input type="text" class="email"  name="email"  id="email" placeholder="Email">
+                                    <input type="submit" class="button" value="Подписаться">
+                                </form>
+                            </ul>
+                            <ul class="fifth_item1">
+                                <a href="#" class="why">
+                                    <span class="ion-chevron-right"></span>Внимание <div class="red">конкурс!</div>
+                                </a>
+                                <li>Конкурс творчества</li>
+                                <div class="big">
+                                    ПОЧЕМУ Я ЛЮБЛЮ МАГАЗИН КОСМЕТИКИ BERUSKA.RU”
+                                </div>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right">
+                    <ul class="goods">
+                        <a href="#" class="hits">
+                            <span class="ion-chevron-right"></span>Хиты продаж
+                        </a>
+                        <li>  
+                            <img src="img/layer-88.png" class="main">
+                            <div class="text_main">
+                                <div class="oil">Alverde Масло для тела "Красный апельсин и Цветы бузины" 200 мл</div>
+                                <span class="price_goods">Цена:</span> <span class="lightgreen">271 руб.</span>
+                                <div class="info">
+                                    <input type="submit" id="inside" value="В корзину" class="inside">
+                                    <img src="img/down.png" class="down">
+                                    <span class="quantity">123</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/layer-88.png" class="main">
+                            <div class="text_main">
+                                <div class="oil">Alverde Масло для тела "Красный апельсин и Цветы бузины" 200 мл</div>
+                                <span class="price_goods">Цена:</span> <span class="lightgreen">271 руб.</span>
+                                <div class="info">
+                                    <input type="submit" id="inside" value="В корзину" class="inside">
+                                    <img src="img/down.png" class="down">
+                                    <span class="quantity">123</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/layer-88.png" class="main">
+                            <div class="text_main">
+                                <div class="oil">Alverde Масло для тела "Красный апельсин и Цветы бузины" 200 мл</div>
+                                <span class="price_goods">Цена:</span> <span class="lightgreen">271 руб.</span>
+                                <div class="info">
+                                    <input type="submit" id="inside" value="В корзину" class="inside">
+                                    <img src="img/down.png" class="down">
+                                    <span class="quantity">123</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/layer-88.png" class="main">
+                            <div class="text_main">
+                                <div class="oil">Alverde Масло для тела "Красный апельсин и Цветы бузины" 200 мл</div>
+                                <span class="price_goods">Цена:</span> <span class="lightgreen">271 руб.</span>
+                                <div class="info">
+                                    <input type="submit" id="inside" value="В корзину" class="inside">
+                                    <img src="img/down.png" class="down">
+                                    <span class="quantity">123</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="fourth_block">
+            <div class="block">
+                <a href="#" class="brands">
+                    <span class="ion-chevron-right"></span>Наши марки
+                </a>
+                <script>
+                    $(document).ready(function(){
+                        $('.slider4').bxSlider({
+                            slideWidth: 100,
+                            minSlides: 2,
+                            maxSlides: 8,
+                            moveSlides: 1,
+                            slideMargin: 10,
+                            auto:true
+                        });
+                    });
+                </script>
+                <div class="slider4">
+                    <div class="slide"><img src="img/layer-74.png"></div>
+                    <div class="slide"><img src="img/layer-76.png"></div>
+                    <div class="slide"><img src="img/layer-77.png"></div>
+                    <div class="slide"><img src="img/layer-75.png"></div>
+                    <div class="slide"><img src="img/layer-78.png"></div>
+                    <div class="slide"><img src="img/layer-119.png"></div>
+                    <div class="slide"><img src="img/layer-120.png"></div>
+                    <div class="slide"><img src="img/layer-129.png"></div>
+                    <div class="slide"><img src="img/layer-74.png"></div>
+                    <div class="slide"><img src="img/layer-76.png"></div>
+                    <div class="slide"><img src="img/layer-77.png"></div>
+                    <div class="slide"><img src="img/layer-75.png"></div>
+                    <div class="slide"><img src="img/layer-78.png"></div>
+                    <div class="slide"><img src="img/layer-119.png"></div>
+                    <div class="slide"><img src="img/layer-120.png"></div>
+                    <div class="slide"><img src="img/layer-129.png"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="block">
+                <div class="logo"></div>
+                <ul class="company">
+                    Компания
+                    <li>О нас</li>
+                    <li>История покупки</li>
+                    <li>Зарабатывай вместе с нами</li>
+                    <li>Отзывы</li>
+                </ul>
+                <ul class="information">
+                    Информация
+                    <li>Мой профиль</li>
+                    <li>Награды</li>
+                    <li>Акции</li>
+                    <li>Условия доставки</li>
+                    <li>Условия оплаты</li>
+                    <li>Вопросы и ответы</li>
+                </ul>
+                <ul class="pay">
+                    <a href="#" class="paying">
+                        <span class="ion-chevron-right"></span>Методы оплаты
+                    </a>
+                    <li>
+                        <img src="img/icons_footer.png">
+                    </li>
+                    <li>
+                        ©2013 Beruska -
+                        <a class="light_green_footer">
+                        beruska.ru
+                        </a>
+                    </li>
+                </ul>
+               <!--  <div class="up">
+                    <a href="#up">Вверх</a>
+                </div> -->
+            </div>
+        </footer>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
